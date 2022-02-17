@@ -27,13 +27,11 @@ const onResponse = (response: AxiosResponse): AxiosResponse => {
 const onResponseError = async (error: AxiosError): Promise<AxiosError> => {
     if (error.response) {
 
-         const config = error.config;
-
         // unauthorized user
         if (error.response.status === 401){
             console.log("401 status")
             // refresh token failed => error
-            if (error.config.url == "/users/dj-rest-auth/token/refresh/"){
+            if (error.config.url === "/users/dj-rest-auth/token/refresh/"){
                 console.log("refresh token did not work...")
                 return Promise.reject(error);
             }

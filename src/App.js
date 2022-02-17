@@ -1,15 +1,11 @@
-import  { Component, lazy, Suspense } from 'react';
+import  { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router ,
-  HashRouter ,
   Route,
-  Link,
   Routes,
   Navigate,
 } from 'react-router-dom';
-import {useCookies} from 'react-cookie';
 import './scss/style.scss';
-import routes from './routes';
 import {Cookies} from './cookies';
 
 const loading = (
@@ -25,9 +21,6 @@ const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
 // Pages
 const Login = lazy(() => import('./views/pages/login/login'));
 const Signup = lazy(() => import('./views/pages/signup/signup'));
-const Page404 = lazy(() => import('./views/pages/page404/Page404'));
-const Page500 = lazy(() => import('./views/pages/page500/Page500'));
-const Dashboard = lazy(() => import('./views/dashboard/Dashboard'));
 
 
 
