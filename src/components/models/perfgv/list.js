@@ -1,48 +1,25 @@
 import * as React from 'react';
-import {useEffect, useState} from 'react';
-import Badge from "react-bootstrap/Badge";
+import {useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import TableSortLabel from '@mui/material/TableSortLabel';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import DoneIcon from '@mui/icons-material/Done';
-import PendingIcon from '@mui/icons-material/Pending';
-import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
-import SearchIcon from '@mui/icons-material/Search';
-import InputBase from '@mui/material/InputBase';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
@@ -182,52 +159,8 @@ const ModelsListToolbar = ({models, filters, setFilters}) => {
   );
 };
 
-
-{/*}
-const ModelsListToolbar_sav = ({models, setFiltered}) => {
-    let navigate = useNavigate();
-    let classes = useStyles();
-
-
-    const handleChangeSearch = (event) => {
-        const search_text = event.target.value
-        const filtered = models.filter( model =>   model.title.includes(search_text) || model.description.includes(search_text))
-        setFiltered(filtered)
-    }
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar className={classes.toolbar}>
-                    <Button variant="contained"
-                        style = {{alignSelf:'right'}}
-                        onClick={()=> {
-                            navigate("/models/perfgv/create")
-                        }}
-                    >
-                        Add
-                    </Button>
-                    <Box sx={{ flexGrow: 1 }} />
-                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        < Search >
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                                onChange = {handleChangeSearch}
-                             />
-                        </Search>
-                    </Box>
-                </Toolbar>
-            </AppBar>
-        </Box>
-  );
-};
-*/}
-
 export function ModelCard(props) {
-    const {id, title, description, author, creation_date, last_edition_date, models, setModels, refreshSwitch, setRefreshSwitch} = props
+    const {id, title, description, creation_date,  models, setModels, refreshSwitch, setRefreshSwitch} = props
     let navigate = useNavigate();
 
     const handleDelete = (event, id) => {

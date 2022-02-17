@@ -1,26 +1,18 @@
-import {useState, useEffect} from 'react';
+import { useEffect} from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Navigate,
-  Link,
   useNavigate,
   useParams
 } from "react-router-dom";
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { Checkbox } from '@mui/material';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import axios from 'axios';
-import { useFormik, ErrorMessage } from 'formik';
+import { useFormik } from 'formik';
 import * as yup from 'yup';
 import modelsService from '../../../services/models.services'
 

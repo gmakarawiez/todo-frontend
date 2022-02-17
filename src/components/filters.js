@@ -1,7 +1,4 @@
-import React, { Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { CContainer, CSpinner } from '@coreui/react'
-import OutlinedInput from '@mui/material/OutlinedInput';
+import React from 'react'
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -12,22 +9,10 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
-// routes config
-import routes from '../routes'
 
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
-
 
 
 export  function run_filters(models, filters){

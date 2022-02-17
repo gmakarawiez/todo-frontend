@@ -1,8 +1,5 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Navigate,
   Link,
   useNavigate,
 } from "react-router-dom";
@@ -11,12 +8,11 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import { useFormik, ErrorMessage } from 'formik';
+import { useFormik } from 'formik';
 import * as yup from 'yup';
 import userServices from  '../../../services/users.services'
 import {Cookies} from '../../../cookies';
