@@ -62,15 +62,15 @@ export default function ModelsEdit( ){
         .catch((error) => {
             console.log("error: ", error)
         })
-    }, []);
+    }, [formik]);
 
     function onSubmit(){
 
         // get data provided by user
         const data = formik.values
 
-        modelsService.editModel(id, data).
-        then((response) => {
+        modelsService.editModel(id, data)
+        .then((response) => {
             console.log(response)
         })
         .then(() => {

@@ -94,7 +94,7 @@ const FilterBar = ({filters, setFilters}) => {
             const users_choices = users.map((user) => user.email);
             setUsersChoices(users_choices);
             console.log("users_choices", users_choices)
-            console.log("FilterBar filters", filters)
+            //console.log("FilterBar filters", filters)
         })
         .catch((error) => {
             console.log(error)
