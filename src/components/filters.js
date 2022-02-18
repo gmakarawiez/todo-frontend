@@ -31,6 +31,8 @@ export  function run_filters(models, filters){
                         return false
                     }
                     break;
+                default:
+                    break;
             }
         }
         return true
@@ -56,8 +58,8 @@ export function MultipleSelectFilter({name, label, choices, filters, setFilters}
         setFilters(filters_)
         console.log("MultipleSelectFilter filters", filters_)
         console.log("choices", choices)
-        console.log("checked", checked)
-     }, [choices]);
+        //console.log("checked", checked)
+     }, [setChecked, choices, filters, name, setFilters]);
 
     const handleChange = (event) => {
         const {
@@ -157,7 +159,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export function SearchTextFilter({name, fields, filters, setFilters}) {
-    const [checked, setChecked] = React.useState([]);
 
     const handleChange = (event) => {
         const {

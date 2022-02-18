@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "http://gmakarawiez.pythonanywhere.com",
   "dependencies": {
     "@coreui/coreui": "^4.1.0",
     "@coreui/icons": "^2.1.0",

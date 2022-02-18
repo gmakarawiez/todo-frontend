@@ -3,8 +3,8 @@ import UsersService from  './services/users.services'
 import {Cookies} from './cookies';
 
 
-const BACKEND_BASE_URL="http://127.0.0.1:8000"
-
+//const BACKEND_BASE_URL="http://127.0.0.1:8000"
+const BACKEND_BASE_URL="http://gmakarawiez.pythonanywhere.com"
 
 const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
     if (config.url !== '/users/dj-rest-auth/login/'){

@@ -52,17 +52,7 @@ export default function ModelsEdit( ){
     let navigate = useNavigate();
     const classes = useStyles();
 
-    useEffect(() => {
-        modelsService.getOneModel(id)
-        .then((response) => {
-            const {id, ...model} = response.data;
-            console.log("model yooyoo: ", model)
-            formik.setValues(model)
-        })
-        .catch((error) => {
-            console.log("error: ", error)
-        })
-    }, [formik]);
+
 
     function onSubmit(){
 
@@ -92,6 +82,18 @@ export default function ModelsEdit( ){
         validationSchema: validationSchema,
         onSubmit: onSubmit
      });
+
+    useEffect(() => {
+        modelsService.getOneModel(id)
+        .then((response) => {
+            const {id, ...model} = response.data;
+            console.log("model yooyoo: ", model)
+            formik.setValues(model)
+        })
+        .catch((error) => {
+            console.log("error: ", error)
+        })
+    }, [formik, id]);
 
     return (
         <Container component="main" maxWidth="xs">
