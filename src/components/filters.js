@@ -11,8 +11,6 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
 
 
 export  function run_filters(models, filters){
@@ -95,7 +93,7 @@ export function MultipleSelectFilter({name, label, choices, filters, setFilters}
                     renderValue={(checked) => {
                         const nb = checked.length;
                         //checked.join(', ')}
-                        return ( nb == 1 ? `${checked}` : `${nb} selected`)
+                        return ( nb === 1 ? `${checked}` : `${nb} selected`)
                     }}
                 >
                     {choices.map((choice) => (
