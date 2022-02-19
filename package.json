@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://gmakarawiez.pythonanywhere.com",
+  "engines" : {
+    "npm" : ">=7.19",
+    "node" : ">=16.4"
+  },
   "dependencies": {
     "@coreui/coreui": "^4.1.0",
     "@coreui/icons": "^2.1.0",
