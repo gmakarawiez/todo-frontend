@@ -63,7 +63,8 @@ const apiClient = () => {
 		baseURL: BACKEND_BASE_URL,
 		timeout: 5000,
 		headers:{
-            'Content-Type': 'application/json',
+            		'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': 'https://todo-frontend-api.herokuapp.com'
 		}
 	});
 
