@@ -64,7 +64,6 @@ const apiClient = () => {
 		timeout: 5000,
 		headers:{
             		'Content-Type': 'application/json',
-			'Access-Control-Allow-Origin': 'https://todo-frontend-api.herokuapp.com/*'
 		}
 	});
 
