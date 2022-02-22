@@ -59,7 +59,7 @@ export function MultipleSelectFilter({name, label, choices, filters, setFilters}
         console.log("MultipleSelectFilter filters", filters_)
         console.log("choices", choices)
         //console.log("checked", checked)
-     }, [setChecked, choices, filters, name, setFilters]);
+     }, [choices]);
 
     const handleChange = (event) => {
         const {
