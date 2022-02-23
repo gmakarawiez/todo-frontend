@@ -93,7 +93,7 @@ export default function ModelsEdit( ){
         .catch((error) => {
             console.log("error: ", error)
         })
-    }, [formik, id]);
+    }, []);
 
     return (
         <Container component="main" maxWidth="xs">
